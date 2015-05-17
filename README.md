@@ -32,3 +32,13 @@ The problem is partitioned into two major categories:
 The decision as to which direction an elevator should move is based on the concept of nearest endpoint. Intuitively, you can visualize all of the destination floors for an elevator on a number line. The most efficient path to visiting every goal is to first go to the nearest endpoint and then change direction and go to the other end.
 
 Deciding which elevator to assign to each of these jobs is less straight-forward. The idea here is to divide requests into convenient and inconvenient for specific elevators. A convenient request is one that's on the way and won't require a change in direction, with everything being convenient to an idle elevator. The algorithm is then to first look for the nearest elevator for which a request is convenient, falling back on the nearest of all elevators.
+
+# Build
+To run the tests:
+``` shell
+ant ElevatorControlSystemTest ElevatorTest
+```
+To compile the class files:
+``` shell
+ant build
+```
