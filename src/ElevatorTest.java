@@ -76,5 +76,12 @@ public class ElevatorTest {
 	assertEquals(10, e.getFloor());
     }
     
-    // TODO: Remove direction from constructor
+    @Test
+    public void moveTowardNearestEndpoint() {
+	Elevator e = new Elevator(10, Direction.UP);
+	e.request(9);
+	e.request(15);
+	e.step();
+	assertEquals(9, e.getFloor());
+    }
 }
