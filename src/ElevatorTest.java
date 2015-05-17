@@ -75,4 +75,6 @@ public class ElevatorTest {
 	e.step();
 	assertEquals(10, e.getFloor());
     }
+    
+    // TODO: Remove direction from constructor
 }

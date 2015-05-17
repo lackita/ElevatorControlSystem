@@ -32,8 +32,4 @@ public class Elevator {
 	return floor;
     }
 
-    public Direction getDirection() {
-	return direction;
-    }
-
 }
