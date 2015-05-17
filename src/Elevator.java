@@ -16,7 +16,8 @@ public class Elevator {
 
     public void request(int floor) {
 	goals.add(floor);
-	if (this.floor < floor) direction = Direction.UP; 
+	if (this.floor < floor) direction = Direction.UP;
+	if (this.floor > floor) direction = Direction.DOWN;
     }
 
     public void step() {

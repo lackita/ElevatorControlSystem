@@ -31,10 +31,21 @@ public class ElevatorTest {
     }
     
     @Test
-    public void changeDirectionToAccomodateNewGoalUpstairs() {
+    public void changeDirectionToAccommodateNewGoalUpstairs() {
 	Elevator e = new Elevator(10, Direction.DOWN);
 	e.request(15);
 	e.step();
 	assertEquals(11, e.getFloor());
     }
+    
+    @Test
+    public void changeDirectionToAccommodateNewGoalDownstairs() {
+	Elevator e = new Elevator(10, Direction.UP);
+	e.request(5);
+	e.step();
+	assertEquals(9, e.getFloor());
+    }
+    
+    // TODO: accommodate multiple passengers
+    // TODO: same floor ignored
 }
