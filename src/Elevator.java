@@ -18,14 +18,14 @@ public class Elevator {
     }
 
     public void step() {
+	if (goals.contains(floor)) goals.remove(floor);
+
 	if (goals.isEmpty()) direction = Direction.IDLE;
 	else if (direction == Direction.UP && goals.last() < floor) direction = Direction.DOWN;
 	else if (direction == Direction.DOWN && goals.first() > floor) direction = Direction.UP;
 
 	if (direction == Direction.UP) ++floor;
 	else if (direction == Direction.DOWN) --floor;
-
-	if (goals.contains(floor)) goals.remove(floor);
     }
 
     public int getFloor() {

@@ -67,5 +67,12 @@ public class ElevatorTest {
 	e.step();
 	assertEquals(11, e.getFloor());
     }
-    // TODO: same floor ignored
+    
+    @Test
+    public void sameFloorDroppedOffImmediately() {
+	Elevator e = new Elevator(10, Direction.UP);
+	e.request(10);
+	e.step();
+	assertEquals(10, e.getFloor());
+    }
 }
