@@ -87,6 +87,13 @@ public class ElevatorControlSystemTest {
 	assertElevatorsAtFloor(1, 1);
     }
 
+    @Test
+    public void updateElevator() {
+	ecs.update(0, 10);
+	ecs.step();
+	assertEquals(1, ecs.status()[0].getFloor());
+    }
+
     private void assertElevatorsAtFloor(int n, int floor) {
 	for (Elevator e : ecs.status()) {
 	    if (e.getFloor() == floor) --n;

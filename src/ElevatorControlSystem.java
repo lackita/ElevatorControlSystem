@@ -43,4 +43,7 @@ public class ElevatorControlSystem {
 	    e.step();
     }
 
+    public void update(int elevator, int floor) {
+	elevators[elevator].request(floor);
+    }
 }
